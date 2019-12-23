@@ -2,9 +2,22 @@ Buongiorno,
 mi chiamo Marelli Alessandro e sono un Junior Front-End Developer.
 Come anticipato a Daniele Berto, ho potuto lavorare alla Code Challenge solamente nel weekend per via del lavoro che sto attualmente svolgendo.
 
-Per la challenge ho voluto sviluppare l'applicazione ho preferito utilizzare Javascript. Ho fatto questa scelta in base alle mie conoscenze attuali e per evitare di incappare in problemi che, non conoscendo l'eventuale framework, avrebbero potuto allungare ulteriormente il tempo che avrebbe richiesto il terminare la sfida.
+Per la challenge ho preferito sviluppare l'applicazione utilizzando Javascript. Ho fatto questa scelta in base alle mie conoscenze attuali e per evitare di incappare in eventuali problemi che avrebbero potuto allungare ulteriormente il tempo impiegato per terminare la sfida.
+Ho sviluppato l'applicazione basandomi su Chrome e Firefox e ho fatto in modo che si adatti agli schermi con seguente risoluzione:
+ - 1920x1080;
+ - 1600x900;
+ - 1440x900;
+ - 1366x768;
+ - 1280x768;
+ - 1024x768;
 
 Per avviare l'applicazione:
 
-- Scaricare la repository
-- 
+- Scaricare la repository in formato .zip;
+- Estrarre la cartella all'interno sul Desktop;
+- Aprire la cartella;
+- Avviare il file .bat in base al browser utilizzato;
+
+
+Vi ringrazio per la possibilità che mi avete gentilmente offerto.
+Spero che il mio lavoro sia di vostro gradimento.
