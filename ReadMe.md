@@ -19,5 +19,8 @@ Per avviare l'applicazione:
 - Avviare il file .bat in base al browser utilizzato;
 
 
-Vi ringrazio per la possibilità che mi avete gentilmente offerto.
+Colgo l'occasione per ringraziarvi della possibilità che mi avete gentilmente offerto e per l'interesse che avete mostrato nei miei confronti nonostante io sia un profilo Junior.
 Spero che il mio lavoro sia di vostro gradimento.
+
+A presto,
+Alessandro
