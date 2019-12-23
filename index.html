@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Asteroids of the day</title>
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<main>
+			<h1 class="title">Asteroids of the day</h1>
+			<div id="menu">
+				<!-- SEZIONE BOTTONI -->
+				<div id="button">
+					<p>Select one day to update the chart:</p>
+					<div id="day">
+						<button id="mon" class="btn " onclick="setMonday()">mon</button>
+						<button id="tue" class="btn " onclick="setTuesday()">tue</button>
+						<button id="wed" class="btn " onclick="setWednesday()">wed</button>
+						<button id="thur" class="btn " onclick="setThursday()">thur</button>
+						<button id="fri" class="btn " onclick="setFriday()">fri</button>
+						<button id="sat" class="btn " onclick="setSaturday()">sat</button>
+						<button id="sun" class="btn " onclick="setSunday()">sun</button>
+					</div>
+				</div>
+
+				<!-- SEZIONE LEGENDA -->
+				<div id="legend">
+					<p>DIAMETER</p>
+					<div id="diameter">
+						<div class="min">
+							<div class="dot">
+								<div class="dot2"></div>
+							</div>
+							<p>Min Km</p>
+						</div>
+						<div class="max">
+							<div class="dot">
+								<div class="dot3"></div>
+							</div>
+							<p>Max Km</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- SEZIONE GRAFICO -->
+			<div id="graphic"></div>
+
+			<div id="assi">
+				<p><img src="img/20.svg" class="distanza" /> DISTANZA (au)</p>
+				<p><img src="img/20 Copy.svg" class="velocità" /> VELOCITA' (km/s)</p>
+			</div>
+		</main>
+
+		<!-- SEZIONE BRIGHTEST -->
+
+		<aside>
+			<div class="line"></div>
+			<div data-aos="fade-left" data-aos-offset="800" data-aos-easing="ease-out">
+				<div id="brightest">
+					<h1 class="title">Brightest of the week</h1>
+
+					<div id="menu">
+						<p class="magnitude">MAGNITUDE (H)</p>
+					</div>
+
+					<div id="legend2">
+						<p class="area">
+							<img src="img/White Square.svg" class="whiteSquare" /> Filled Area: Magnitude
+						</p>
+						<p class="area">
+							<img src="img/Black Square.svg" class="blackSquare" /> Empty Area: Brightness
+						</p>
+					</div>
+
+					<!-- SEZIONE INFO -->
+
+					<div id="infoBrightest">
+						<div class="cube">
+							<div class="square">
+								<div class="dot4"></div>
+							</div>
+							<div class="info2">
+								<p class="name1">Name:</p>
+								<p class="diameter1">Diameter:</p>
+								<p class="magnitude1">Magnitude:</p>
+							</div>
+						</div>
+
+						<div class="cube">
+							<div class="border">
+								<div class="square2">
+									<div class="dot4"></div>
+								</div>
+							</div>
+							<div class="info2">
+								<p class="name2">Name:</p>
+								<p class="diameter2">Diameter:</p>
+								<p class="magnitude2">Magnitude:</p>
+							</div>
+						</div>
+
+						<div class="cube">
+							<div class="border">
+								<div class="square3">
+									<div class="dot4"></div>
+								</div>
+							</div>
+							<div class="info2">
+								<p class="name3">Name:</p>
+								<p class="diameter3">Diameter:</p>
+								<p class="magnitude3">Magnitude:</p>
+							</div>
+						</div>
+
+						<div class="cube">
+							<div class="border">
+								<div class="square4">
+									<div class="dot4"></div>
+								</div>
+							</div>
+							<div class="info2">
+								<p class="name4">Name:</p>
+								<p class="diameter4">Diameter:</p>
+								<p class="magnitude4">Magnitude:</p>
+							</div>
+						</div>
+
+						<div class="cube">
+							<div class="border">
+								<div class="dot4"></div>
+							</div>
+							<div class="info2">
+								<p class="less bright"></p>
+								<p class="name5">Name:</p>
+								<p class="diameter5">Diameter:</p>
+								<p class="magnitude5">Magnitude:</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</body>
+
+	<script src="sources/get.js"></script>
+	<script src="sources/paramiters.js"></script>
+</html>
