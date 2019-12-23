@@ -6,4 +6,5 @@ Per la challenge ho voluto sviluppare l'applicazione ho preferito utilizzare Jav
 
 Per avviare l'applicazione:
 
-- Scaricare la repository NEAR-EARTH-OBJECTS
+- Scaricare la repository
+- 
