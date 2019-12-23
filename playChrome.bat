@@ -1,1 +1,1 @@
-start chrome ./Index.html
+start chrome Index.html
