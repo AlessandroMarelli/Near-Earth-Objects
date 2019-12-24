@@ -297,7 +297,7 @@
 		document.getElementsByClassName("magnitude4")[0].innerHTML =
 			"Magnitude: " + info2[Math.round((info2.length / 4) * 3)].magnitude + " h"
 
-		// SET LESS BRIGHT OBJECT
+		// SET LEAST BRIGHT OBJECT
 		document.getElementsByClassName("name5")[0].innerHTML = "Name: " + info2[info2.length - 1].name
 		document.getElementsByClassName("diameter5")[0].innerHTML =
 			"Diameter: " + info2[info2.length - 1].diameter.toFixed(3) + " Km"
