@@ -1,15 +1,18 @@
 {
-	// CREATE DAYS OBJECT
-	var days = []
+	// CREATE DAYS ARRAY
+	var days = [] // set an empty array
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			// JSON TO OBJECT
 			var myObj = JSON.parse(this.responseText)
 			week = myObj.near_earth_objects
+
+			// find the date of all the week's day
+
 			for (i = first; i <= last; i += 86400000) {
 				var current = new Date(i).toISOString().slice(0, 10)
 				console.log(current)
-				days.push(week[current])
+				days.push(week[current]) // Push all the element inside the array
 			}
 			setInfo()
 			setActive()
@@ -18,13 +21,15 @@
 		}
 	}
 
-	// SET FUNCTION ON BUTTON OF DAYS
-	var info = []
+	// SET FUNCTION ON THE BUTTON
+	var info = [] // Set an empty array
+
 	function setMonday() {
-		info = [] // Clear info
+		info = [] // Clear info array
 
 		var nearObjs = days[0]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -35,7 +40,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -44,8 +49,10 @@
 
 	function setTuesday() {
 		info = [] // Clear the info
+
 		var nearObjs = days[1]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -56,7 +63,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -65,8 +72,10 @@
 
 	function setWednesday() {
 		info = [] // Clear the info
+
 		var nearObjs = days[2]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -77,7 +86,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -89,6 +98,7 @@
 
 		var nearObjs = days[3]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -99,7 +109,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -108,8 +118,10 @@
 
 	function setFriday() {
 		info = [] // Clear the info
+
 		var nearObjs = days[4]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -120,7 +132,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -129,8 +141,10 @@
 
 	function setSaturday() {
 		info = [] // Clear the info
+
 		var nearObjs = days[5]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -141,7 +155,7 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
@@ -150,8 +164,10 @@
 
 	function setSunday() {
 		info = [] // Clear the info
+
 		var nearObjs = days[6]
 		nearObjs.forEach(function(element) {
+			// Create an object with the required parameters
 			var paramiters = {
 				name: element.name,
 				diameter:
@@ -162,14 +178,14 @@
 				velocity: element.close_approach_data[0].relative_velocity.kilometers_per_second,
 				distance: element.close_approach_data[0].miss_distance.astronomical
 			}
-			info.push(paramiters)
+			info.push(paramiters) // Push the paramiters in the Info Array
 		})
 		deleteBubble()
 		createBubbles()
 		// console.log(info)
 	}
 
-	// ADD/REMOVE CLASS ACTIVE
+	// ADD/REMOVE THE ACTIVE CLASS FROM THE BUTTONS
 	var btnContainer = document.getElementById("day")
 	var btns = btnContainer.getElementsByClassName("btn")
 	for (var i = 0; i < btns.length; i++) {
@@ -196,7 +212,7 @@
 
 		n.classList.add("active")
 
-		// PARAMITERS ON-LOAD
+		// Set the parameters on-load
 		if (n.id == "mon" && n.className == "btn active") {
 			var nearObjs = days[0]
 			setMonday()
@@ -218,11 +234,13 @@
 		}
 	}
 
-	// BRIGHTEST INFO
+	// BRIGHTEST INFO ON-LOAD
 	function setInfo() {
-		var info2 = []
+		var info2 = [] // Set an empty array
+
 		for (let i = 0; i < days.length; i++) {
 			var nearObjs2 = days[i]
+			// Create an array with the info of the elements of the whole week
 			nearObjs2.forEach(function(element) {
 				var paramiters = {
 					name: element.name,
@@ -237,7 +255,7 @@
 				info2.push(paramiters)
 			})
 
-			// ORDER BY MAGNITUDE INFO2
+			// ORDER INFO2 BY MAGNITUDE
 			info2.sort(function(a, b) {
 				if (a.magnitude > b.magnitude) {
 					return -1
@@ -290,6 +308,7 @@
 	// CREATE BUBBLES and INFO POP-UP
 	function createBubbles() {
 		var graphic = document.getElementById("graphic")
+		// Order all the Elements by the diameter
 		info.sort(function(a, b) {
 			if (a.diameter > b.diameter) {
 				return -1
@@ -301,6 +320,8 @@
 		})
 
 		info.forEach(function(element) {
+			// Create bubbles based on diameter
+
 			var diameter = element.diameter * 80000
 			var velocity = element.velocity * 2.5
 			var distance = element.distance * 180
@@ -308,16 +329,21 @@
 			var magnitude = element.magnitude
 			var divOut = document.createElement("div")
 			var divIn = document.createElement("div")
+
+			// Add style and class to the div and append them
 			divOut.style.transition = "2s"
 			divOut.appendChild(divIn)
 			graphic.appendChild(divOut)
 			divIn.className = "bubble"
 			divOut.className = "bubbleCenter"
+
+			//	Create bubbles by diameter and position them in the chart
 			divIn.style.height = diameter + "%"
 			divIn.style.width = diameter + "%"
 			divOut.style.bottom = distance + "%"
 			divOut.style.left = velocity + "%"
 
+			// Add the "mouseover" action to the Bubbles and Create dynamically the Info Tooltip
 			divIn.addEventListener("mouseover", function() {
 				var allInfo = document.createElement("div")
 				var information = document.createElement("div")
@@ -342,6 +368,7 @@
 				divOut.appendChild(allInfo)
 			})
 
+			// Add the "mouseleave" action to the Bubbles
 			divIn.addEventListener("mouseleave", function() {
 				var allInfo = document.getElementsByClassName("allInfo")
 				if (allInfo) {
@@ -351,7 +378,7 @@
 		})
 	}
 
-	// DELETE BUBBLES
+	// Delete the bubbles at the change of day
 	function deleteBubble() {
 		var divOut = document.getElementsByClassName("bubbleCenter")
 		var divIn = document.getElementsByClassName("bubble")
@@ -363,5 +390,3 @@
 		}
 	}
 }
-
-// Committare il tutto su Git
