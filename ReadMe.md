@@ -2,7 +2,7 @@ Buongiorno,
 mi chiamo Marelli Alessandro e sono un Junior Front-End Developer.
 Come anticipato a Daniele Berto, ho potuto lavorare alla Code Challenge solamente nel weekend per via del lavoro che sto attualmente svolgendo.
 
-Per la challenge ho preferito sviluppare l'applicazione utilizzando Javascript. Ho fatto questa scelta in base alle mie conoscenze attuali e per evitare di incappare in eventuali problemi che avrebbero potuto allungare ulteriormente il tempo impiegato per terminare la sfida. Ho utilizzato come font il Maven Pro, purtroppo l'Avenir mi dava problemi su Firefox perciò ne ho utilizzato uno il più simile possibile.
+Ho sviluppato l'applicazione utilizzando interamente JavaScript. Ho utilizzato il font Maven Pro poiché non sono riuscito a recuperare l'Avenir che avete utilizzato nel progetto su InVision. Sono molto simili perciò spero non sia un problema.
 Ho sviluppato l'applicazione basandomi su Chrome e Firefox e ho fatto in modo che si adatti agli schermi con seguente risoluzione:
 
  - 1920x1080;
